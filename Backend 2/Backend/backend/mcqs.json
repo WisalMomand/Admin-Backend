@@ -1,0 +1,16 @@
+[
+  {
+    "question": "What is the capital of Pakistan?",
+    "options": ["Karachi", "Lahore", "Islamabad", "Peshawar"],
+    "correctAnswer": "Islamabad",
+    "subject": "General Knowledge",
+   
+  },
+  {
+    "question": "2 + 2 = ?",
+    "options": ["3", "4", "5", "6"],
+    "correctAnswer": "4",
+    "subject": "Math",
+   
+  }
+]
