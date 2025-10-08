@@ -1,14 +1,12 @@
-// routes/userRoutes.js
+
 const express = require("express");
 const router = express.Router();
-const User = require("../model/user");
+const User = require("../model/User");
 
-// ✅ CREATE user (register)
 router.post("/users", async (req, res) => {
   try {
     const {  name, email, role, semester, section, photoURL } = req.body;
     console.log("Creating user:", { name, email, role, semester, section });
-    // Prevent duplicate registration
     const existingUser = await User.findOne({ email });
     if (existingUser) {
       return res.status(400).json({ error: "User already exists" });
@@ -31,7 +29,6 @@ router.post("/users", async (req, res) => {
   }
 });
 
-// ✅ GET user by email
 router.get("/users/:email", async (req, res) => {
   try {
     const email = req.params.email;
